@@ -11,6 +11,11 @@
       <section class="section">
         <div class="columns">
           <div class="column is-8 is-offset-2">
+              {% if post.image %}
+                <figure class="image mb-6">
+                  <img src="{{ post.image.url }}" alt="">
+                </figure>
+              {% endif %}
               <div class="content is-medium">
                   <h2 class="subtitle is-4">작성시간: {{ post.created_at|date:'y-m-d H:i' }}</h2>
                   <h1 class="title">{{ post.title }}</h1>
